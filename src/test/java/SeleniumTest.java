@@ -17,14 +17,20 @@ public class SeleniumTest {
 		driver.get("https://google.com");
 //		driver.manage().window().maximize();
 //		driver.wait(0);
-		driver.findElement(By.name("q")).sendKeys("Barcelona FC");
-		WebDriverWait wait = new WebDriverWait(driver, 3);
-		driver.findElement(By.name("btnK")).click();
 		
-		System.out.println("The title of this page is "+driver.getTitle());
+		//Using By name
+//		driver.findElement(By.name("q")).sendKeys("Barcelona FC");
+//		WebDriverWait wait = new WebDriverWait(driver, 5);
+//		driver.findElement(By.name("btnK")).click();
 		
-//		driver.close();
-//		driver.quit();
+		//Using By XPath
+		
+		driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("Barcelona FC");
+//		WebDriverWait wait = new WebDriverWait(driver, 5);
+		driver.findElement(By.xpath("//input[@class='gNO89b']")).click();
+
+		driver.close();
+		driver.quit();
 		
 	}
 
