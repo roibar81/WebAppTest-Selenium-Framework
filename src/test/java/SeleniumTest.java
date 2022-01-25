@@ -25,7 +25,6 @@ public class SeleniumTest {
 //		Using By XPath
 		
 //		driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("Barcelona FC");
-////		WebDriverWait wait = new WebDriverWait(driver, 5);
 //		driver.findElement(By.xpath("//input[@class='gNO89b']")).click();
 
 		
@@ -34,11 +33,7 @@ public class SeleniumTest {
 //		Class --> .
 		
 		driver.findElement(By.cssSelector("input.gLFyf.gsfi")).sendKeys("Barcelona FC");
-//		WebDriverWait wait = new WebDriverWait(driver, 3);
-//		on google search ther is two cssSelector for search button, so 
-//		here I used xpath.
-		
-		driver.findElement(By.xpath("//input[@class='gNO89b']")).click();
+		driver.findElement(By.cssSelector("input.gNO89b")).click();
 		
 		driver.close();
 		driver.quit();
