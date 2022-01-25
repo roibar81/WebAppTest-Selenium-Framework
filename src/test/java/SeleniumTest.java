@@ -2,7 +2,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumTest {
@@ -23,15 +22,26 @@ public class SeleniumTest {
 //		WebDriverWait wait = new WebDriverWait(driver, 5);
 //		driver.findElement(By.name("btnK")).click();
 		
-		//Using By XPath
+//		Using By XPath
 		
-		driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("Barcelona FC");
-//		WebDriverWait wait = new WebDriverWait(driver, 5);
-		driver.findElement(By.xpath("//input[@class='gNO89b']")).click();
+//		driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("Barcelona FC");
+////		WebDriverWait wait = new WebDriverWait(driver, 5);
+//		driver.findElement(By.xpath("//input[@class='gNO89b']")).click();
 
+		
+//		Using cssSelector 
+//      ID    --> #
+//		Class --> .
+		
+		driver.findElement(By.cssSelector("input.gLFyf.gsfi")).sendKeys("Barcelona FC");
+//		WebDriverWait wait = new WebDriverWait(driver, 3);
+//		on google search ther is two cssSelector for search button, so 
+//		here I used xpath.
+		
+		driver.findElement(By.xpath("//input[@class='gNO89b']")).click();
+		
 		driver.close();
 		driver.quit();
-		
 	}
 
 }
